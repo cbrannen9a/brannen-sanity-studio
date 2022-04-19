@@ -9,7 +9,9 @@
   "scripts": {
     "start": "sanity start",
     "dev": "yarn start",
-    "build": "sanity build"
+    "build": "SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN sanity build",
+    "deploy": "sanity deploy && sanity graphql deploy --playground",
+    "graphql-deploy": "SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN sanity graphql deploy --playground --force"
   },
   "keywords": [
     "sanity"
