@@ -9,11 +9,6 @@ export default {
       title: "Label",
     },
     {
-      name: "heading",
-      type: "string",
-      title: "Heading",
-    },
-    {
       name: "text",
       type: "portableText",
       title: "Text",
@@ -21,11 +16,11 @@ export default {
   ],
   preview: {
     select: {
-      heading: "heading",
+      label: "label",
     },
-    prepare({ heading }) {
+    prepare({ label }) {
       return {
-        title: `${heading}`,
+        title: `${label}`,
         subtitle: "Text section",
       };
     },
