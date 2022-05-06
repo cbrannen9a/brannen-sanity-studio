@@ -15,6 +15,31 @@ export default {
       title: "Title",
     },
     {
+      name: "parentRoute",
+      type: "reference",
+      title: "Is Subpage of (optional)",
+      to: [{ type: "route" }],
+    },
+    {
+      name: "slug",
+      type: "slug",
+      title: "Slug",
+      hidden: ({ document }) => !document?.parentRoute,
+      options: {
+        source: (doc, options) => options.parent.title,
+        maxLength: 96,
+      },
+      validation: (Rule) =>
+        Rule.custom((slug, context) => {
+          if (context.document?.parentRoute) {
+            return slug.current.trim().length > 0
+              ? true
+              : "Slug is needed for subpages";
+          }
+          return true;
+        }),
+    },
+    {
       name: "content",
       type: "array",
       title: "Page sections",
