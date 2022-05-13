@@ -20,6 +20,7 @@ import {
   imageSection,
   mailchimp,
   textSection,
+  contentPreview,
 } from "./objects";
 
 // Then we give our schema to the builder and provide the result to Sanity
@@ -42,5 +43,6 @@ export default createSchema({
     simplePortableText,
     siteConfig,
     textSection,
+    contentPreview,
   ]),
 });
