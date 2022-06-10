@@ -5,7 +5,7 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // Document types
-import { page, route, siteConfig } from "./documents";
+import { page, route, siteSettings } from "./documents";
 
 // Object types
 import {
@@ -29,6 +29,12 @@ export default createSchema({
   // Then proceed to concatenate our our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
+    // documents
+    page,
+    route,
+    siteSettings,
+
+    // objects
     cta,
     embedHTML,
     figure,
@@ -37,11 +43,8 @@ export default createSchema({
     internalLink,
     link,
     mailchimp,
-    page,
     portableText,
-    route,
     simplePortableText,
-    siteConfig,
     textSection,
     contentPreview,
   ]),

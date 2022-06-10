@@ -1,9 +1,9 @@
 import bcp47 from "bcp47";
 
 export default {
-  name: "site-config",
+  name: "siteSettings",
   type: "document",
-  title: "Site configuration",
+  title: "Site Settings",
   // https://www.sanity.io/docs/experimental/ui-affordances-for-actions
   __experimental_actions: [/* "create", "delete", */ "update", "publish"],
   fieldsets: [{ name: "footer", title: "Footer" }],
