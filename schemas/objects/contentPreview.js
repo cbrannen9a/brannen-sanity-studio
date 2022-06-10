@@ -14,5 +14,17 @@ export default {
       type: "reference",
       to: [{ type: "route" }],
     },
+    {
+      title: "Query",
+      name: "query",
+      type: "reference",
+      to: { type: "dataQuery" },
+    },
+    {
+      name: "params",
+      title: "Params",
+      type: "array",
+      of: [{ type: "keyValue" }],
+    },
   ],
 };

@@ -7,6 +7,8 @@ export { default as portableText } from "./portableText";
 export { default as simplePortableText } from "./simplePortableText";
 export { default as hero } from "./hero";
 export { default as imageSection } from "./imageSection";
+export { default as keyValue } from "./keyValue";
 export { default as mailchimp } from "./mailchimp";
+export { default as parameter } from "./parameter";
 export { default as textSection } from "./textSection";
 export { default as contentPreview } from "./contentPreview";

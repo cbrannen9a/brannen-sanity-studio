@@ -5,7 +5,7 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // Document types
-import { page, route, siteSettings } from "./documents";
+import { page, dataQuery, route, siteSettings } from "./documents";
 
 // Object types
 import {
@@ -13,12 +13,14 @@ import {
   embedHTML,
   figure,
   internalLink,
+  keyValue,
   link,
   portableText,
   simplePortableText,
   hero,
   imageSection,
   mailchimp,
+  parameter,
   textSection,
   contentPreview,
 } from "./objects";
@@ -31,6 +33,7 @@ export default createSchema({
   types: schemaTypes.concat([
     // documents
     page,
+    dataQuery,
     route,
     siteSettings,
 
@@ -41,8 +44,10 @@ export default createSchema({
     hero,
     imageSection,
     internalLink,
+    keyValue,
     link,
     mailchimp,
+    parameter,
     portableText,
     simplePortableText,
     textSection,
