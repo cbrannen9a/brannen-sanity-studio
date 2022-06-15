@@ -1,6 +1,8 @@
-import React from "react";
+import React, { FC, ReactNode } from "react";
 
-const LinkRender = ({ children }) => <span>{children} 🌍</span>;
+const LinkRender: FC<{ children: ReactNode }> = ({ children }) => (
+  <span>{children} 🌍</span>
+);
 
 export default {
   title: "URL",

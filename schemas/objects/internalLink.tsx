@@ -1,6 +1,8 @@
-import React from "react";
+import React, { FC, ReactNode } from "react";
 
-const InternalLinkRender = ({ children }) => <span>{children} 🔗</span>;
+const InternalLinkRender: FC<{ children: ReactNode }> = ({ children }) => (
+  <span>{children} 🔗</span>
+);
 
 export default {
   title: "Internal link to another document",
