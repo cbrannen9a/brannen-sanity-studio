@@ -32,7 +32,13 @@ export default {
       title: "title",
       params: "queryParams",
     },
-    prepare({ title, params }) {
+    prepare({
+      title,
+      params,
+    }: {
+      title: string;
+      params: { key: string; optional: boolean }[];
+    }) {
       console.log(params);
       return {
         title: title,

@@ -21,7 +21,7 @@ export default {
       key: "key",
       optional: "optional",
     },
-    prepare({ key, optional }) {
+    prepare({ key, optional }: { key: string; optional: boolean }) {
       return {
         title: `${key} ${optional ? "(Optional)" : ""}`,
       };
