@@ -9,17 +9,19 @@ export default {
       title: "Heading",
     },
     {
+      name: "subHeading",
+      type: "string",
+      title: "SubHeading",
+    },
+    {
       name: "tagline",
       type: "simplePortableText",
       title: "Tagline",
     },
     {
-      name: "backgroundImage",
-      type: "image",
-      title: "Background image",
-      options: {
-        hotspot: true,
-      },
+      name: "image",
+      type: "figure",
+      title: "Image",
     },
     {
       name: "ctas",
@@ -36,7 +38,7 @@ export default {
   preview: {
     select: {
       title: "heading",
-      media: "backgroundImage",
+      media: "image",
     },
     prepare({ title, media }) {
       return {

@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 export default {
   name: "page",
   type: "document",
@@ -26,10 +28,10 @@ export default {
       title: "Slug",
       hidden: ({ document }) => !document?.parentRoute,
       options: {
-        source: (doc, options) => options.parent.title,
+        source: (_, options) => options.parent.title,
         maxLength: 96,
       },
-      validation: (Rule) =>
+      validation: (Rule: Rule) =>
         Rule.custom((slug, context) => {
           if (context.document?.parentRoute) {
             return slug.current.trim().length > 0
@@ -45,6 +47,8 @@ export default {
       title: "Page sections",
       of: [
         { type: "hero" },
+        { type: "banner" },
+        { type: "cards" },
         { type: "imageSection" },
         { type: "mailchimp" },
         { type: "textSection" },

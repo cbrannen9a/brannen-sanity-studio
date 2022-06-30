@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 export default {
   name: "figure",
   title: "Image",
@@ -22,6 +24,7 @@ export default {
       options: {
         isHighlighted: true,
       },
+      validation: (Rule: Rule) => Rule.isRequired(),
     },
   ],
   preview: {
