@@ -1,4 +1,7 @@
+export { default as banner } from "./banner";
 export { default as cta } from "./cta";
+export { default as card } from "./card";
+export { default as cards } from "./cards";
 export { default as embedHTML } from "./embedHTML";
 export { default as figure } from "./figure";
 export { default as internalLink } from "./internalLink";

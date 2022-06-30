@@ -47,6 +47,8 @@ export default {
       title: "Page sections",
       of: [
         { type: "hero" },
+        { type: "banner" },
+        { type: "cards" },
         { type: "imageSection" },
         { type: "mailchimp" },
         { type: "textSection" },

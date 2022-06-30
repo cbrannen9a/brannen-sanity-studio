@@ -1,7 +1,7 @@
 export default {
   type: "object",
-  name: "hero",
-  title: "Hero",
+  name: "banner",
+  title: "Banner",
   fields: [
     {
       name: "heading",
@@ -12,16 +12,6 @@ export default {
       name: "subHeading",
       type: "string",
       title: "SubHeading",
-    },
-    {
-      name: "tagline",
-      type: "simplePortableText",
-      title: "Tagline",
-    },
-    {
-      name: "image",
-      type: "figure",
-      title: "Image",
     },
     {
       name: "ctas",
@@ -38,13 +28,11 @@ export default {
   preview: {
     select: {
       title: "heading",
-      media: "image",
     },
-    prepare({ title, media }) {
+    prepare({ title }: { title: string }) {
       return {
         title,
-        subtitle: "Hero section",
-        media,
+        subtitle: "Banner section",
       };
     },
   },

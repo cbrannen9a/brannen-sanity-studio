@@ -3,6 +3,7 @@ import { page, dataQuery, route, siteSettings } from "./documents";
 
 // Object types
 import {
+  banner,
   cta,
   embedHTML,
   figure,
@@ -17,6 +18,8 @@ import {
   parameter,
   textSection,
   contentPreview,
+  card,
+  cards,
 } from "./objects";
 
 export const schemaTypes = [
@@ -27,7 +30,10 @@ export const schemaTypes = [
   siteSettings,
 
   // objects
+  banner,
   cta,
+  card,
+  cards,
   embedHTML,
   figure,
   hero,
