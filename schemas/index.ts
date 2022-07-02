@@ -14,12 +14,13 @@ import {
   simplePortableText,
   hero,
   imageSection,
-  mailchimp,
   parameter,
   textSection,
   contentPreview,
   card,
   cards,
+  tag,
+  tags,
 } from "./objects";
 
 export const schemaTypes = [
@@ -41,10 +42,11 @@ export const schemaTypes = [
   internalLink,
   keyValue,
   link,
-  mailchimp,
   parameter,
   portableText,
   simplePortableText,
   textSection,
   contentPreview,
+  tag,
+  tags,
 ];

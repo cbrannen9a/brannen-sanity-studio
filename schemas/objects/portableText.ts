@@ -24,5 +24,10 @@ export default {
     },
     { type: "figure" },
     { type: "embedHTML" },
+    {
+      title: "CodeBlock",
+      name: "code",
+      type: "code",
+    },
   ],
 };
