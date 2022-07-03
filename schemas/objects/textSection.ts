@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 export default {
   type: "object",
   name: "textSection",
@@ -7,6 +9,7 @@ export default {
       name: "label",
       type: "string",
       title: "Label",
+      validation: (rule: Rule) => rule.isRequired(),
     },
     {
       name: "text",
@@ -18,7 +21,7 @@ export default {
     select: {
       label: "label",
     },
-    prepare({ label }) {
+    prepare({ label }: { label: string }) {
       return {
         title: `${label}`,
         subtitle: "Text section",

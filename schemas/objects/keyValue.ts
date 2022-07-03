@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 export default {
   name: "keyValue",
   title: "Key Value",
@@ -7,6 +9,7 @@ export default {
       title: "Key",
       name: "key",
       type: "string",
+      validation: (rule: Rule) => rule.isRequired(),
     },
     {
       name: "value",
@@ -20,7 +23,7 @@ export default {
       key: "key",
       value: "value",
     },
-    prepare({ key, value }) {
+    prepare({ key, value }: { key: string; value?: string }) {
       return {
         title: `${key} - ${value}`,
       };

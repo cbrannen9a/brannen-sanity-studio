@@ -1,4 +1,4 @@
-import { Rule } from "sanity";
+import { Rule, Slug, ValidationContext } from "sanity";
 
 export default {
   name: "page",
@@ -26,13 +26,15 @@ export default {
       name: "slug",
       type: "slug",
       title: "Slug",
-      hidden: ({ document }) => !document?.parentRoute,
+      hidden: ({ document }: { document: { parentRoute?: string } }) =>
+        !document?.parentRoute,
       options: {
-        source: (_, options) => options.parent.title,
+        source: (_: unknown, options: { parent: { title: string } }) =>
+          options.parent.title,
         maxLength: 96,
       },
       validation: (Rule: Rule) =>
-        Rule.custom((slug, context) => {
+        Rule.custom((slug: Slug, context: ValidationContext) => {
           if (context.document?.parentRoute) {
             return slug.current.trim().length > 0
               ? true

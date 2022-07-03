@@ -1,3 +1,5 @@
+import { SanityImageAssetDocument } from "@sanity/client";
+
 export default {
   type: "object",
   name: "imageSection",
@@ -32,10 +34,15 @@ export default {
   preview: {
     select: {
       heading: "heading",
-      subtitle: "label",
       media: "image",
     },
-    prepare({ heading, media }) {
+    prepare({
+      heading,
+      media,
+    }: {
+      heading: string;
+      media: SanityImageAssetDocument;
+    }) {
       return {
         title: `Image: ${heading}`,
         subtitle: "Image section",

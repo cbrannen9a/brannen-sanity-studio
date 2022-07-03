@@ -42,7 +42,7 @@ export default {
       title: "title",
       ariaLabel: "ariaLabel",
     },
-    prepare({ title, ariaLabel }) {
+    prepare({ title, ariaLabel }: { title?: string; ariaLabel?: string }) {
       return {
         title: `Tag Section: ${title || ariaLabel || "ariaLabel not set"}`,
       };

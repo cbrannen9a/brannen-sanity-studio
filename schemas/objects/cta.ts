@@ -6,7 +6,7 @@ export default {
   type: "object",
   validation: (Rule: Rule) =>
     Rule.custom(
-      (fields = {}) =>
+      (fields: { route?: string; link?: string } = {}) =>
         !fields.route || !fields.link || "Only one link type is allowed"
     ),
   fieldsets: [
@@ -43,7 +43,17 @@ export default {
       slug: "route.slug.current",
       link: "link",
     },
-    prepare({ title, routeTitle = "", slug, link }) {
+    prepare({
+      title,
+      routeTitle = "",
+      slug,
+      link,
+    }: {
+      title: string;
+      routeTitle: string;
+      slug: string;
+      link: string;
+    }) {
       const subtitleExtra = slug
         ? `Slug:/${slug}/`
         : link

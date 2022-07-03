@@ -1,3 +1,6 @@
+import { SanityImageAssetDocument } from "@sanity/client";
+import { Rule } from "sanity";
+
 export default {
   type: "object",
   name: "hero",
@@ -7,6 +10,7 @@ export default {
       name: "heading",
       type: "string",
       title: "Heading",
+      validation: (rule: Rule) => rule.isRequired(),
     },
     {
       name: "subHeading",
@@ -40,7 +44,13 @@ export default {
       title: "heading",
       media: "image",
     },
-    prepare({ title, media }) {
+    prepare({
+      title,
+      media,
+    }: {
+      title: string;
+      media?: SanityImageAssetDocument;
+    }) {
       return {
         title,
         subtitle: "Hero section",

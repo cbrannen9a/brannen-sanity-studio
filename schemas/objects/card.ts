@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 const fromColors = [
   "from-blue-700",
   "from-yellow-700",
@@ -24,6 +26,7 @@ export default {
       name: "title",
       type: "string",
       title: "Title",
+      validation: (rule: Rule) => rule.isRequired(),
     },
     {
       name: "text",
@@ -61,7 +64,15 @@ export default {
       subtitle: "cta.title",
       link: "cta.link",
     },
-    prepare({ title, subtitle, link }) {
+    prepare({
+      title,
+      subtitle,
+      link,
+    }: {
+      title: string;
+      subtitle?: string;
+      link: string;
+    }) {
       return {
         title: `Card: ${title || "Title not set"}`,
         subtitle,

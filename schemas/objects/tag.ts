@@ -1,3 +1,5 @@
+import { SanityImageAssetDocument } from "@sanity/client";
+
 export default {
   name: "tag",
   title: "Tag",
@@ -45,7 +47,13 @@ export default {
       title: "title",
       media: "media",
     },
-    prepare({ title, media }) {
+    prepare({
+      title,
+      media,
+    }: {
+      title: string;
+      media: SanityImageAssetDocument;
+    }) {
       return {
         title,
         media,

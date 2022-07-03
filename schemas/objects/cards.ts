@@ -1,3 +1,5 @@
+import { Rule } from "sanity";
+
 export default {
   type: "object",
   name: "cards",
@@ -6,8 +8,8 @@ export default {
     {
       name: "label",
       type: "string",
+      validation: (rule: Rule) => rule.isRequired(),
     },
-
     {
       name: "cards",
       Title: "Cards",
@@ -24,7 +26,7 @@ export default {
     select: {
       label: "label",
     },
-    prepare({ label }) {
+    prepare({ label }: { label: string }) {
       return {
         title: `Card Section: ${label || "Label not set"}`,
       };
