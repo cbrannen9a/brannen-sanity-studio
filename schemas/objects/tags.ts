@@ -24,7 +24,14 @@ export default {
       },
       initialValue: "tags",
     },
-
+    {
+      name: "forPreview",
+      type: "string",
+      options: {
+        list: ["previewOnly", "pageOnly", "both"],
+      },
+      initialValue: "both",
+    },
     {
       name: "tags",
       Title: "Tags",
