@@ -7,7 +7,10 @@ export default {
   title: "Site Settings",
   // https://www.sanity.io/docs/experimental/ui-affordances-for-actions
   __experimental_actions: [/* "create", "delete", */ "update", "publish"],
-  fieldsets: [{ name: "footer", title: "Footer" }],
+  fieldsets: [
+    { name: "footer", title: "Footer" },
+    { name: "dataQueries", title: "Data Queries" },
+  ],
   fields: [
     {
       name: "title",
@@ -80,6 +83,24 @@ export default {
       name: "footerText",
       type: "simplePortableText",
       fieldset: "footer",
+    },
+    {
+      name: "pageQuery",
+      type: "reference",
+      to: [{ type: "dataQuery" }],
+      fieldset: "dataQueries",
+    },
+    {
+      name: "subPageQuery",
+      type: "reference",
+      to: [{ type: "dataQuery" }],
+      fieldset: "dataQueries",
+    },
+    {
+      name: "siteSettingsQuery",
+      type: "reference",
+      to: [{ type: "dataQuery" }],
+      fieldset: "dataQueries",
     },
   ],
 };

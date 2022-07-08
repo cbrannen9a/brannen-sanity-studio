@@ -39,12 +39,15 @@ export default {
       title: string;
       params: { key: string; optional: boolean }[];
     }) {
-      console.log(params);
       return {
         title: title,
-        subtitle: `${params
-          .map((p) => `${p.key} ${p.optional ? "(Optional)" : ""}`)
-          .join(", ")}`,
+        subtitle: `${
+          params?.length > 0
+            ? params
+                .map((p) => `${p.key} ${p.optional ? "(Optional)" : ""}`)
+                .join(", ")
+            : ""
+        }`,
       };
     },
   },
