@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "@sanity/code-input": "^3.0.0-v3-studio.1",
+    "@sanity/color-input": "^3.0.0-v3-studio.3",
     "@sanity/eslint-config-studio": "^2.0.0",
     "bcp47": "^1.1.2",
     "eslint": "^8.6.0",

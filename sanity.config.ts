@@ -1,8 +1,11 @@
 import { createConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import { codeInput } from "@sanity/code-input";
+import { colorInput } from "@sanity/color-input";
 import { schemaTypes } from "./schemas";
 import structure from "./structure";
+
+const plugins = [deskTool({ structure }), codeInput(), colorInput()];
 
 export default createConfig([
   {
@@ -12,7 +15,7 @@ export default createConfig([
     projectId: "y95plxu9",
     dataset: "production",
     basePath: "/production",
-    plugins: [deskTool({ structure }), codeInput()],
+    plugins: plugins,
 
     schema: {
       types: schemaTypes,
@@ -25,7 +28,7 @@ export default createConfig([
     projectId: "y95plxu9",
     dataset: "development",
     basePath: "/development",
-    plugins: [deskTool({ structure }), codeInput()],
+    plugins: plugins,
 
     schema: {
       types: schemaTypes,
