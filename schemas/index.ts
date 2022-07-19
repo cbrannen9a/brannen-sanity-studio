@@ -1,5 +1,12 @@
 // Document types
-import { page, dataQuery, route, siteSettings, imageDoc } from "./documents";
+import {
+  page,
+  dataQuery,
+  route,
+  siteSettings,
+  imageDoc,
+  theme,
+} from "./documents";
 
 // Object types
 import {
@@ -30,7 +37,7 @@ export const schemaTypes = [
   dataQuery,
   route,
   siteSettings,
-
+  theme,
   // objects
   banner,
   cta,

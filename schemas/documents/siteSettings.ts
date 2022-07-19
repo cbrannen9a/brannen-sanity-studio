@@ -104,70 +104,10 @@ export default {
       fieldset: "dataQueries",
     },
     {
-      name: "primary",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "primaryText",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "primaryLight",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "primaryLightText",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "primaryDark",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "primaryDarkText",
-      type: "color",
-      fieldset: "colors",
-    },
-
-    {
-      name: "secondary",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "secondaryText",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "secondaryLight",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "secondaryLightText",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "secondaryDark",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "secondaryDarkText",
-      type: "color",
-      fieldset: "colors",
-    },
-    {
-      name: "background",
-      type: "color",
-      fieldset: "colors",
+      name: "themes",
+      title: "Themes",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "theme" }] }],
     },
   ],
 };
