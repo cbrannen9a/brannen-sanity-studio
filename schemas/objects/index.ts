@@ -14,5 +14,6 @@ export { default as keyValue } from "./keyValue";
 export { default as parameter } from "./parameter";
 export { default as textSection } from "./textSection";
 export { default as contentPreview } from "./contentPreview";
+export { default as social } from "./social";
 export { default as tag } from "./tag";
 export { default as tags } from "./tags";

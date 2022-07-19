@@ -109,5 +109,11 @@ export default {
       type: "array",
       of: [{ type: "reference", to: [{ type: "theme" }] }],
     },
+    {
+      name: "social",
+      title: "Social",
+      type: "array",
+      of: [{ type: "social" }],
+    },
   ],
 };

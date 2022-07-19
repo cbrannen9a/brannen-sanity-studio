@@ -6,6 +6,7 @@ import {
   siteSettings,
   imageDoc,
   theme,
+  socialTypes,
 } from "./documents";
 
 // Object types
@@ -28,6 +29,7 @@ import {
   cards,
   tag,
   tags,
+  social,
 } from "./objects";
 
 export const schemaTypes = [
@@ -38,6 +40,7 @@ export const schemaTypes = [
   route,
   siteSettings,
   theme,
+  socialTypes,
   // objects
   banner,
   cta,
@@ -55,6 +58,7 @@ export const schemaTypes = [
   simplePortableText,
   textSection,
   contentPreview,
+  social,
   tag,
   tags,
 ];
