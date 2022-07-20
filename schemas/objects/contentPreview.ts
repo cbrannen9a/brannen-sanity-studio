@@ -9,6 +9,11 @@ export default {
       type: "string",
     },
     {
+      name: "heading",
+      type: "string",
+      title: "Heading",
+    },
+    {
       title: "Parent",
       name: "parentRoute",
       type: "reference",

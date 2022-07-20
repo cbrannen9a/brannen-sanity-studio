@@ -71,6 +71,11 @@ export default {
       description: "Image for sharing previews on Facebook, Twitter etc.",
       fieldset: "metadata",
     },
+    {
+      name: "statusDate",
+      type: "date",
+      title: "Status Date",
+    },
   ],
 
   preview: {

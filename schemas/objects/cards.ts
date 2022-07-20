@@ -11,6 +11,11 @@ export default {
       validation: (rule: Rule) => rule.isRequired(),
     },
     {
+      name: "heading",
+      type: "string",
+      title: "Heading",
+    },
+    {
       name: "cards",
       Title: "Cards",
       type: "array",
