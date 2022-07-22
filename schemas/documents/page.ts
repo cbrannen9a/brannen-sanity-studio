@@ -55,6 +55,7 @@ export default {
         { type: "textSection" },
         { type: "contentPreview" },
         { type: "tags" },
+        { type: "shareSection" },
       ],
     },
     {

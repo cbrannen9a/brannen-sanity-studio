@@ -14,6 +14,9 @@ export default {
       title: "URL",
       name: "href",
       type: "url",
+      options: {
+        collapsed: false,
+      },
       validation: (r: Rule) =>
         r.uri({
           allowRelative: true,
