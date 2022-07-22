@@ -31,6 +31,7 @@ import {
   tags,
   social,
   shareSection,
+  shareData,
 } from "./objects";
 
 export const schemaTypes = [
@@ -63,4 +64,5 @@ export const schemaTypes = [
   tag,
   tags,
   shareSection,
+  shareData,
 ];

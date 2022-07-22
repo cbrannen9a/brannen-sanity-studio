@@ -13,6 +13,7 @@ export { default as hero } from "./hero";
 export { default as imageSection } from "./imageSection";
 export { default as keyValue } from "./keyValue";
 export { default as parameter } from "./parameter";
+export { default as shareData } from "./shareData";
 export { default as shareSection } from "./shareSection";
 export { default as social } from "./social";
 export { default as tag } from "./tag";

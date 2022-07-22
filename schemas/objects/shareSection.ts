@@ -13,16 +13,8 @@ export default {
     },
     {
       name: "shareData",
-      type: "object",
+      type: "shareData",
       title: "shareData",
-      fields: [
-        { name: "title", type: "string", title: "Title" },
-        { name: "text", type: "string", title: "Text" },
-        { name: "url", type: "url", title: "Url" },
-      ],
-      options: {
-        collapsed: false,
-      },
     },
   ],
   preview: {
