@@ -76,6 +76,7 @@ export default {
       name: "statusDate",
       type: "date",
       title: "Status Date",
+      initialValue: new Date().toISOString().split("T")[0],
     },
   ],
 
