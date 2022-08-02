@@ -6,6 +6,18 @@ export default (S: StructureBuilder) =>
   S.list()
     .title("Site")
     .items([
+      S.listItem()
+        .title("Pages")
+        .child(
+          S.documentTypeList("route")
+            .title("Routes")
+            .child(async (itemId) => {
+              return S.documentList()
+                .title("Pages")
+                .filter('_type == "page" && $itemId == parentRoute._ref')
+                .params({ itemId });
+            })
+        ),
       ...S.documentTypeListItems().filter(
         (listItem: any) => !filteredDocTypes.includes(listItem.getId())
       ),

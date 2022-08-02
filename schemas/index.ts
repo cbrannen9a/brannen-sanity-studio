@@ -4,7 +4,6 @@ import {
   dataQuery,
   route,
   siteSettings,
-  imageDoc,
   theme,
   socialTypes,
 } from "./documents";
@@ -37,7 +36,6 @@ import {
 export const schemaTypes = [
   // documents
   page,
-  imageDoc,
   dataQuery,
   route,
   siteSettings,
