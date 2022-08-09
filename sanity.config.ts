@@ -4,8 +4,21 @@ import { codeInput } from "@sanity/code-input";
 import { colorInput } from "@sanity/color-input";
 import { schemaTypes } from "./schemas";
 import structure from "./structure";
+import { SetPathAction } from "./actions";
 
 const plugins = [deskTool({ structure }), codeInput(), colorInput()];
+
+const setPathSchema = ["page"];
+
+const customActions = (prev, { schemaType }) => {
+  if (setPathSchema.includes(schemaType)) {
+    return [
+      SetPathAction,
+      ...prev.filter((prevAction) => prevAction.action !== "publish"),
+    ];
+  }
+  return prev;
+};
 
 export default createConfig([
   {
@@ -20,6 +33,9 @@ export default createConfig([
     schema: {
       types: schemaTypes,
     },
+    document: {
+      actions: customActions,
+    },
   },
   {
     name: "development",
@@ -32,6 +48,9 @@ export default createConfig([
 
     schema: {
       types: schemaTypes,
+    },
+    document: {
+      actions: customActions,
     },
   },
 ]);

@@ -1,5 +1,3 @@
-import { Rule, Slug, ValidationContext } from "sanity";
-
 export default {
   name: "page",
   type: "document",
@@ -19,29 +17,25 @@ export default {
     {
       name: "parentRoute",
       type: "reference",
-      title: "Is Subpage of (optional)",
+      title: "Route",
       to: [{ type: "route" }],
     },
     {
       name: "slug",
       type: "slug",
       title: "Slug",
-      hidden: ({ document }: { document: { parentRoute?: string } }) =>
-        !document?.parentRoute,
+      description: "(Optional)",
       options: {
         source: (_: unknown, options: { parent: { title: string } }) =>
           options.parent.title,
         maxLength: 96,
       },
-      validation: (Rule: Rule) =>
-        Rule.custom((slug: Slug, context: ValidationContext) => {
-          if (context.document?.parentRoute) {
-            return slug.current.trim().length > 0
-              ? true
-              : "Slug is needed for subpages";
-          }
-          return true;
-        }),
+    },
+    {
+      name: "path",
+      title: "Path",
+      type: "string",
+      readonly: true,
     },
     {
       name: "content",
