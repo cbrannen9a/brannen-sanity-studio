@@ -9,15 +9,15 @@ function getPath(route, subRoute) {
   const main = route?.slug?.current ?? "";
   const partial = subRoute?.slug?.current ?? "";
   if (main && partial) {
-    return `${main}/${partial}`;
+    return `/${main}/${partial}`;
   }
 
   if (main && !partial) {
-    return `${main}`;
+    return `/${main}`;
   }
 
   if (!main && partial) {
-    return `${partial}`;
+    return `/${partial}`;
   }
   return "/";
 }
