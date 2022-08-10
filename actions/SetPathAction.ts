@@ -68,7 +68,8 @@ export const SetPathAction: DocumentActionComponent = ({
         {
           set: {
             path: getPath(route, doc),
-            statusDate: new Date().toISOString().split("T")[0],
+            statusDate:
+              doc.statusDate ?? new Date().toISOString().split("T")[0],
           },
         },
       ]);
