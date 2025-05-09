@@ -7,23 +7,29 @@ export default {
   options: {
     hotspot: true,
   },
+  fieldsets: [
+    {
+      title: "Caption and Alt text",
+      name: "caption-alt",
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    },
+  ],
   fields: [
     {
       title: "Caption",
       name: "caption",
       type: "string",
-      options: {
-        isHighlighted: true,
-      },
+      fieldset: "caption-alt",
     },
     {
       name: "alt",
       type: "string",
       title: "Alternative text",
-      description: "Important for SEO and accessiblity.",
-      options: {
-        isHighlighted: true,
-      },
+      description: "Important for SEO and accessibility.",
+      fieldset: "caption-alt",
       validation: (Rule: Rule) => Rule.isRequired(),
     },
   ],

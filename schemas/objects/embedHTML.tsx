@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { component } from "sanity/desk";
 
 const HTMLpreview: FC<{ value: { html: string } }> = ({ value }) => (
   // eslint-disable-next-line
@@ -21,10 +22,10 @@ export default {
       },
     },
   ],
-  preview: {
+  components: {
     select: {
       html: "html",
     },
-    component: HTMLpreview,
+    preview: HTMLpreview,
   },
 };
