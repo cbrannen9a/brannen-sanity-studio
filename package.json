@@ -9,7 +9,8 @@
     "dev": "sanity dev",
     "build": "SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN sanity build",
     "deploy": "sanity deploy && sanity graphql deploy --playground",
-    "graphql-deploy": "SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN sanity graphql deploy --playground --force"
+    "graphql-deploy": "SANITY_AUTH_TOKEN=$SANITY_DEPLOY_STUDIO_TOKEN sanity graphql deploy --playground --force",
+    "typegen": "npx sanity schema extract --workspace=production && npx sanity typegen generate"
   },
   "keywords": [
     "sanity"
